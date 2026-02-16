@@ -3,43 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZUM GOLDENEN LÖWEN | Traditionelles Wirtshaus in München</title>
-    <meta name="description" content="Genießen Sie gutbürgerliche Küche in uriger Atmosphäre. Seit 1987 in München. Tisch reservieren ➤">
+    <title>ZUM GOLDENEN LÖWEN | Traditionelles Wirtshaus München</title>
+    <meta name="description" content="Gutbürgerliche Küche seit 1987. Reservieren Sie jetzt Ihren Tisch.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Top Bar mit wichtigen Infos -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
-            <div class="top-bar-left">
-                <span>📍 Marktplatz 12, 80331 München</span>
+            <div class="top-bar-info">
+                <span>Marktplatz 12, 80331 München</span>
                 <span class="divider">|</span>
-                <span>🕐 Mo-Sa: 11:30-23:00 | So: 11:00-21:00</span>
-            </div>
-            <div class="top-bar-right">
-                <a href="tel:+498912345678" class="click-to-call">📞 +49 89 123 456 78</a>
+                <span>Mo-Sa: 11:30-23:00 | So: 11:00-21:00</span>
                 <span class="divider">|</span>
-                <a href="#reservierung" class="top-reserve">Jetzt reservieren</a>
+                <a href="tel:+498912345678">+49 89 123 456 78</a>
             </div>
         </div>
     </div>
 
-    <!-- Sticky Reserve Button (Mobile) -->
-    <a href="#reservierung" class="sticky-reserve-mobile">📅 Tisch reservieren</a>
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">🦁 ZUM GOLDENEN LÖWEN</a>
+            <a href="#" class="logo">ZUM GOLDENEN LÖWEN</a>
             <ul class="nav-menu">
                 <li><a href="#speisekarte">Speisekarte</a></li>
                 <li><a href="#ueber-uns">Über uns</a></li>
-                <li><a href="#ambiente">Ambiente</a></li>
-                <li><a href="#anfahrt">Anfahrt</a></li>
+                <li><a href="#reservierung">Reservierung</a></li>
             </ul>
-            <a href="#reservierung" class="btn-reservierung desktop-only">Tisch reservieren</a>
+            <a href="#reservierung" class="btn-reservierung">Tisch reservieren</a>
             <button class="mobile-toggle" id="mobileToggle">
                 <span></span>
                 <span></span>
@@ -53,345 +46,310 @@
         <ul>
             <li><a href="#speisekarte">Speisekarte</a></li>
             <li><a href="#ueber-uns">Über uns</a></li>
-            <li><a href="#ambiente">Ambiente</a></li>
-            <li><a href="#anfahrt">Anfahrt</a></li>
-            <li><a href="#reservierung" class="btn-primary">Jetzt reservieren</a></li>
+            <li><a href="#reservierung">Reservierung</a></li>
         </ul>
     </div>
 
-    <!-- Hero Section mit Außenansicht -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg">
-            <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1920&q=80');"></div>
+            <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80');"></div>
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
             <div class="rating-badge">
-                ⭐⭐⭐⭐⭐ <span>4.8/5</span> <small>(247 Google Bewertungen)</small>
+                <span class="stars">★★★★★</span>
+                <span class="rating">4.8/5</span>
+                <span class="reviews">(247 Bewertungen)</span>
             </div>
             <h1 class="hero-title">ZUM GOLDENEN LÖWEN</h1>
             <p class="hero-subtitle">Traditionelles Wirtshaus • Gutbürgerliche Küche • Seit 1987</p>
             <div class="hero-buttons">
-                <a href="#reservierung" class="btn-primary">🍽️ Tisch reservieren</a>
-                <a href="tel:+498912345678" class="btn-secondary">📞 Anrufen</a>
-            </div>
-            <div class="hero-features">
-                <span>✓ Parkplätze vorhanden</span>
-                <span>✓ Barrierefrei</span>
-                <span>✓ Vegetarisch & Vegan</span>
+                <a href="#reservierung" class="btn-primary">Tisch reservieren</a>
+                <a href="tel:+498912345678" class="btn-secondary">Anrufen</a>
             </div>
         </div>
     </section>
 
-    <!-- Quick Info Section -->
-    <section class="quick-info">
+    <!-- Info Section -->
+    <section class="info-section">
         <div class="container">
             <div class="info-grid">
                 <div class="info-item">
-                    <strong>📍 Adresse</strong>
+                    <h4>Adresse</h4>
                     <p>Marktplatz 12<br>80331 München</p>
-                    <a href="#anfahrt" class="info-link">Route planen</a>
                 </div>
                 <div class="info-item">
-                    <strong>🕐 Geöffnet</strong>
+                    <h4>Geöffnet</h4>
                     <p>Mo-Sa: 11:30 - 23:00<br>So: 11:00 - 21:00</p>
-                    <span class="status open">✓ Jetzt geöffnet</span>
                 </div>
                 <div class="info-item">
-                    <strong>📞 Reservierung</strong>
+                    <h4>Reservierung</h4>
                     <p>+49 89 123 456 78</p>
-                    <a href="tel:+498912345678" class="info-link">Jetzt anrufen</a>
+                    <a href="tel:+498912345678">Jetzt anrufen</a>
                 </div>
                 <div class="info-item">
-                    <strong>🚗 Parken</strong>
-                    <p>Öffentlicher Parkplatz<br>50m entfernt</p>
-                    <span class="info-link">Kostenlos</span>
+                    <h4>Parken</h4>
+                    <p>Parkplätze verfügbar<br>50m entfernt</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Speisekarte -->
-    <section class="signature-dishes" id="speisekarte">
+    <!-- Speisekarte - Komplett -->
+    <section class="menu-section" id="speisekarte">
         <div class="container">
-            <h2 class="section-title">Unsere beliebtesten Gerichte</h2>
-            <p class="section-subtitle">Frisch zubereitet • Regionale Zutaten • Hausgemacht</p>
+            <h2 class="section-title">Unsere Speisekarte</h2>
+            <p class="section-subtitle">Alle Gerichte frisch zubereitet</p>
             
-            <div class="dishes-grid eight-dishes">
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1599921841143-819065a55cc6?w=600&q=80" alt="Wiener Schnitzel vom Kalb" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <div class="dish-tags">
-                            <span class="tag">Klassiker</span>
+            <div class="menu-category">
+                <h3>Vorspeisen</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Brotzeitbrettel</h4>
+                            <p>Aufschnitt, Käse, Leberwurst, Bauernbrot</p>
                         </div>
-                        <h3>Wiener Schnitzel</h3>
-                        <p>Vom Kalb, paniert, mit Kartoffelsalat & Zitrone</p>
-                        <span class="dish-price">€ 19,50</span>
+                        <span class="price">€ 9,50</span>
                     </div>
-                </div>
-                
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Schweinebraten mit Knödel" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <div class="dish-tags">
-                            <span class="tag">Tagesempfehlung</span>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Obazda</h4>
+                            <p>Hausgemacht, mit Zwiebeln, Brezn und Radi</p>
                         </div>
-                        <h3>Schweinebraten</h3>
-                        <p>24h mariniert, mit Semmelknödel & Rotkohl</p>
-                        <span class="dish-price">€ 17,90</span>
+                        <span class="price">€ 7,90</span>
                     </div>
-                </div>
-                
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80" alt="Zwiebelrostbraten" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Zwiebelrostbraten</h3>
-                        <p>Rinderlendenbraten mit Bratkartoffeln</p>
-                        <span class="dish-price">€ 24,50</span>
-                    </div>
-                </div>
-                
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1626804475297-411d863b5285?w=600&q=80" alt="Käsespätzle" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <div class="dish-tags">
-                            <span class="tag veg">🌿 Vegetarisch</span>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Leberknödelsuppe</h4>
+                            <p>Rinderbrühe mit hausgemachten Leberknödeln</p>
                         </div>
-                        <h3>Allgäuer Käsespätzle</h3>
-                        <p>Mit Bergkäse überbacken & Röstzwiebeln</p>
-                        <span class="dish-price">€ 14,50</span>
-                    </div>
-                </div>
-                
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80" alt="Forelle Müllerin Art" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <div class="dish-tags">
-                            <span class="tag">🐟 Frisch gefangen</span>
-                        </div>
-                        <h3>Forelle Müllerin</h3>
-                        <p>Gebraten mit Mandeln & Petersilienkartoffeln</p>
-                        <span class="dish-price">€ 18,90</span>
-                    </div>
-                </div>
-                
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80" alt="Schweinshaxe" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <h3>Knusprige Haxe</h3>
-                        <p>Mit Sauerkraut, Knödeln & Soße</p>
-                        <span class="dish-price">€ 21,50</span>
-                    </div>
-                </div>
-                
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600&q=80" alt="Maultaschen" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <div class="dish-tags">
-                            <span class="tag veg">🌿 Vegetarisch</span>
-                        </div>
-                        <h3>Maultaschen</h3>
-                        <p>Hausgemacht mit Zwiebelschmelze</p>
-                        <span class="dish-price">€ 15,50</span>
-                    </div>
-                </div>
-                
-                <div class="dish-card">
-                    <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1629115916087-7e8c114a24ed?w=600&q=80" alt="Apfelstrudel" loading="lazy">
-                    </div>
-                    <div class="dish-info">
-                        <div class="dish-tags">
-                            <span class="tag veg">🌿 Vegetarisch</span>
-                        </div>
-                        <h3>Apfelstrudel</h3>
-                        <p>Mit Vanilleeis & warmer Vanillesoße</p>
-                        <span class="dish-price">€ 7,90</span>
+                        <span class="price">€ 6,50</span>
                     </div>
                 </div>
             </div>
-            
-            <div class="menu-notice">
-                <p>🌿 <strong>Besonderheiten:</strong> Vegetarische, vegane und glutenfreie Gerichte auf Anfrage verfügbar. Sprechen Sie unser Personal an!</p>
+
+            <div class="menu-category">
+                <h3>Hauptspeisen</h3>
+                
+                <h4 class="subcategory">Vom Rind</h4>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Zwiebelrostbraten</h4>
+                            <p>Rinderlendenbraten, Bratkartoffeln, Röstzwiebeln</p>
+                        </div>
+                        <span class="price">€ 24,50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Rinderroulade</h4>
+                            <p>Mit Speck und Gurke, Rotweinsauce, Spätzle</p>
+                        </div>
+                        <span class="price">€ 22,90</span>
+                    </div>
+                </div>
+
+                <h4 class="subcategory">Vom Schwein</h4>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Schweinebraten</h4>
+                            <p>24h mariniert, Semmelknödel, Rotkohl</p>
+                        </div>
+                        <span class="price">€ 17,90</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Knusprige Schweinshaxe</h4>
+                            <p>Mit Sauerkraut, Kartoffelknödeln</p>
+                        </div>
+                        <span class="price">€ 21,50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Leberkäse warm</h4>
+                            <p>Mit Kartoffelsalat und Spiegelei</p>
+                        </div>
+                        <span class="price">€ 13,50</span>
+                    </div>
+                </div>
+
+                <h4 class="subcategory">Schnitzel</h4>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Wiener Schnitzel vom Kalb</h4>
+                            <p>Mit Kartoffelsalat und Gurkensalat</p>
+                        </div>
+                        <span class="price">€ 24,50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Schweineschnitzel</h4>
+                            <p>Paniert, mit Pommes oder Kartoffelsalat</p>
+                        </div>
+                        <span class="price">€ 17,50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Zigeunerschnitzel</h4>
+                            <p>Mit pikanter Sauce und Pommes</p>
+                        </div>
+                        <span class="price">€ 19,50</span>
+                    </div>
+                </div>
+
+                <h4 class="subcategory">Vegetarisch</h4>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Allgäuer Käsespätzle</h4>
+                            <p>Mit Bergkäse und Röstzwiebeln</p>
+                        </div>
+                        <span class="price">€ 14,50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Gemüsepfanne</h4>
+                            <p>Saisonales Gemüse, Reis oder Spätzle</p>
+                        </div>
+                        <span class="price">€ 13,90</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Maultaschen</h4>
+                            <p>Hausgemacht, Zwiebelschmelze</p>
+                        </div>
+                        <span class="price">€ 15,50</span>
+                    </div>
+                </div>
+
+                <h4 class="subcategory">Fisch</h4>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Forelle Müllerin</h4>
+                            <p>Gebraten mit Mandeln, Petersilienkartoffeln</p>
+                        </div>
+                        <span class="price">€ 18,90</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Beilagen</h3>
+                <div class="menu-items sides">
+                    <div class="menu-item"><span>Pommes</span><span>€ 4,50</span></div>
+                    <div class="menu-item"><span>Kartoffelsalat</span><span>€ 4,50</span></div>
+                    <div class="menu-item"><span>Bratkartoffeln</span><span>€ 5,50</span></div>
+                    <div class="menu-item"><span>Semmelknödel</span><span>€ 4,00</span></div>
+                    <div class="menu-item"><span>Spätzle</span><span>€ 5,00</span></div>
+                    <div class="menu-item"><span>Rotkohl</span><span>€ 3,50</span></div>
+                    <div class="menu-item"><span>Sauerkraut</span><span>€ 3,50</span></div>
+                    <div class="menu-item"><span>Grüner Salat</span><span>€ 4,50</span></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Desserts</h3>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Apfelstrudel</h4>
+                            <p>Mit Vanilleeis und warmer Vanillesoße</p>
+                        </div>
+                        <span class="price">€ 7,90</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Kaiserschmarrn</h4>
+                            <p>Mit Rosinen und Apfelmus</p>
+                        </div>
+                        <span class="price">€ 9,50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>Dampfnudeln</h4>
+                            <p>Warm mit Vanillesoße</p>
+                        </div>
+                        <span class="price">€ 7,50</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Über uns / Story -->
+    <!-- Highlights mit Bildern -->
+    <section class="highlights">
+        <div class="container">
+            <h2 class="section-title">Unsere Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <img src="https://images.unsplash.com/photo-1599921841143-819065a55cc6?w=600&q=80" alt="Wiener Schnitzel">
+                    <h4>Wiener Schnitzel</h4>
+                    <p>Unser Klassiker - täglich frisch zubereitet</p>
+                </div>
+                <div class="highlight-card">
+                    <img src="https://images.unsplash.com/photo-1626804475297-411d863b5285?w=600&q=80" alt="Käsespätzle">
+                    <h4>Allgäuer Käsespätzle</h4>
+                    <p>Hausgemacht und üppig belegt</p>
+                </div>
+                <div class="highlight-card">
+                    <img src="https://images.unsplash.com/photo-1629115916087-7e8c114a24ed?w=600&q=80" alt="Apfelstrudel">
+                    <h4>Apfelstrudel</h4>
+                    <p>Nach altem Familienrezept</p>
+                </div>
+                <div class="highlight-card">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&q=80" alt="Schweinshaxe">
+                    <h4>Schweinshaxe</h4>
+                    <p>Knusprig und saftig</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns -->
     <section class="about" id="ueber-uns">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Familie Schröder im Restaurant" loading="lazy">
-                </div>
                 <div class="about-content">
                     <h2>Unsere Geschichte</h2>
-                    <p class="lead">Seit über 35 Jahren ein zweites Wohnzimmer für unsere Gäste.</p>
-                    <p>1987 hat Peter Schröder senior den "Goldenen Löwen" übernommen. Was damals als kleine Kneipe begann, ist heute ein beliebtes Wirtshaus für Familien, Freunde und Geschäftsleute.</p>
-                    <p>Unsere Philosophie ist einfach: <strong>Frische, regionale Zutaten</strong> aus dem Münchner Umland, <strong>hausgemachte Speisen</strong> nach bewährten Rezepten und eine <strong>herzliche Gastfreundschaft</strong>, die jeden willkommen heißt.</p>
-                    <div class="about-features">
-                        <div class="feature">
-                            <strong>🥩 100%</strong>
-                            <span>Regionales Fleisch</span>
-                        </div>
-                        <div class="feature">
-                            <strong>🥬 Täglich</strong>
-                            <span>Frisch gekocht</span>
-                        </div>
-                        <div class="feature">
-                            <strong>👨‍👩‍👧 Familie</strong>
-                            <span>Geführt seit 1987</span>
-                        </div>
-                    </div>
+                    <p>Seit 1987 ist der Goldene Löwe ein zweites Zuhause für unsere Gäste. Was als kleine Kneipe begann, ist heute ein beliebtes Wirtshaus für Familien, Freunde und Geschäftsleute.</p>
+                    <p>Unsere Küche ist ehrlich und bodenständig: Frische, regionale Zutaten, hausgemachte Speisen nach bewährten Rezepten und eine herzliche Gastfreundschaft.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Auszeichnungen -->
-    <section class="awards">
-        <div class="container">
-            <h2 class="section-title">Auszeichnungen & Presse</h2>
-            <div class="awards-grid">
-                <div class="award">
-                    <span class="award-year">2024</span>
-                    <h3>🏆 Falstaff Guide</h3>
-                    <p>"Bestes Wirtshaus Münchens"</p>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Restaurant von innen">
                 </div>
-                <div class="award">
-                    <span class="award-year">2023</span>
-                    <h3>📰 Münchner Merkur</h3>
-                    <p>"Die beste Schweinshaxe der Stadt"</p>
-                </div>
-                <div class="award">
-                    <span class="award-year">2022</span>
-                    <h3>⭐ Google Reviews</h3>
-                    <p>4.8/5 Sterne (247 Bewertungen)</p>
-                </div>
-                <div class="award">
-                    <span class="award-year">2020</span>
-                    <h3>🏅 Bayerischer Gastgeber</h3>
-                    <p>Ausgezeichnete Gastfreundschaft</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ambiente -->
-    <section class="ambiente" id="ambiente">
-        <div class="ambiente-content">
-            <div class="ambiente-text">
-                <h2>Urige Atmosphäre</h2>
-                <p>Echtes Holz, gemütliche Nischen und bayerische Gemütlichkeit. Bei uns können Sie entspannen, genießen und sich wie zu Hause fühlen – ob zum schnellen Mittagessen oder einem gemütlichen Abend mit Freunden.</p>
-                <ul class="ambiente-list">
-                    <li>✓ 120 Sitzplätze im Innenbereich</li>
-                    <li>✓ Biergarten mit 80 Plätzen</li>
-                    <li>✓ Separater Raum für Feiern (bis 30 Pers.)</li>
-                    <li>✓ Rollstuhlgerecht</li>
-                </ul>
-                <a href="#reservierung" class="btn-primary">Tisch reservieren</a>
-            </div>
-        </div>
-        <div class="ambiente-gallery">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Gastraum mit Holztischen" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=600&q=80" alt="Gemütliche Ecke" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&q=80" alt="Biergarten" loading="lazy">
             </div>
         </div>
     </section>
 
     <!-- Team -->
-    <section class="team" id="team">
+    <section class="team">
         <div class="container">
             <h2 class="section-title">Ihre Gastgeber</h2>
-            <p class="section-subtitle">Mit Leidenschaft und Herzlichkeit</p>
-            
             <div class="team-grid">
                 <div class="team-member">
                     <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&fit=crop&auto=format&q=80" alt="Peter Schröder" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&fit=crop&auto=format&q=80" alt="Peter Schröder">
                     </div>
-                    <h3>Peter Schröder</h3>
-                    <p class="team-role">Wirt & Gastgeber</p>
-                    <p class="team-bio">"Jeder Gast ist ein Freund"</p>
+                    <h4>Peter Schröder</h4>
+                    <p>Wirt & Gastgeber</p>
                 </div>
-                
                 <div class="team-member">
                     <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop&auto=format&q=80" alt="Maria Schröder" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop&auto=format&q=80" alt="Maria Schröder">
                     </div>
-                    <h3>Maria Schröder</h3>
-                    <p class="team-role">Küchenchefin</p>
-                    <p class="team-bio">Kocht mit Omas Rezepten</p>
+                    <h4>Maria Schröder</h4>
+                    <p>Küchenchefin</p>
                 </div>
-                
                 <div class="team-member">
                     <div class="team-image">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&fit=crop&auto=format&q=80" alt="Thomas Weber" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&fit=crop&auto=format&q=80" alt="Thomas Weber">
                     </div>
-                    <h3>Thomas Weber</h3>
-                    <p class="team-role">Chefkoch</p>
-                    <p class="team-bio">Fachmann für bayerische Küche</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Google Maps & Anfahrt -->
-    <section class="location" id="anfahrt">
-        <div class="container">
-            <h2 class="section-title">So finden Sie uns</h2>
-            <div class="location-grid">
-                <div class="location-info">
-                    <h3>ZUM GOLDENEN LÖWEN</h3>
-                    <p class="address">Marktplatz 12<br>80331 München</p>
-                    
-                    <div class="location-details">
-                        <div class="detail">
-                            <strong>🚗 Mit dem Auto</strong>
-                            <p>Parkplätze direkt am Marktplatz verfügbar (gebührenpflichtig). Alternative: Parkhaus Viktualienmarkt (5 Min. Fußweg)</p>
-                        </div>
-                        <div class="detail">
-                            <strong>🚇 Öffentlich</strong>
-                            <p>U-Bahn: Marienplatz (U3/U6) – 3 Min. Fußweg<br>Bus: 52, 132 – Haltestelle Viktualienmarkt</p>
-                        </div>
-                        <div class="detail">
-                            <strong>♿ Barrierefrei</strong>
-                            <p>Rampen vorhanden, barrierefreie Toiletten, Platz für Rollstühle</p>
-                        </div>
-                    </div>
-                    
-                    <a href="https://www.google.com/maps/dir//Marktplatz+12,+80331+München" target="_blank" class="btn-primary">🗺️ Route in Google Maps öffnen</a>
-                </div>
-                <div class="location-map">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.92493720854!2d11.5727!3d48.1371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75f0a73388d7%3A0x1e6f6e8c6e0b6b0!2sMarktplatz+12%2C+80331+München!5e0!3m2!1sde!2sde!4v1234567890" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <h4>Thomas Weber</h4>
+                    <p>Chefkoch</p>
                 </div>
             </div>
         </div>
@@ -400,47 +358,24 @@
     <!-- Reservierung -->
     <section class="reservation" id="reservierung">
         <div class="container">
+            <h2 class="section-title">Reservierung</h2>
             <div class="reservation-wrapper">
                 <div class="reservation-info">
-                    <h2>Reservieren Sie jetzt</h2>
-                    <p>Garantieren Sie sich einen Platz bei uns. Besonders an Wochenenden empfehlen wir eine frühzeitige Reservierung.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                            <div>
-                                <strong>Schnellreservierung</strong>
-                                <p><a href="tel:+498912345678">+49 89 123 456 78</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                            <div>
-                                <strong>Online 24/7</strong>
-                                <p>Auch für heute noch möglich</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Schnell reservieren</h3>
+                    <p>Rufen Sie uns an oder nutzen Sie das Formular.</p>
+                    <p><strong>Telefon:</strong><br><a href="tel:+498912345678">+49 89 123 456 78</a></p>
+                    <p><strong>Adresse:</strong><br>Marktplatz 12<br>80331 München</p>
                 </div>
-                
                 <div class="reservation-form-wrapper">
-                    <form class="reservation-form" id="reservationForm">
+                    <form id="reservationForm">
                         <div class="form-group">
                             <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Max Mustermann">
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">E-Mail *</label>
-                                <input type="email" id="email" name="email" required placeholder="max@beispiel.de">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Telefon *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+49 151 12345678">
-                            </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
-                        
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="date">Datum *</label>
@@ -449,46 +384,27 @@
                             <div class="form-group">
                                 <label for="time">Uhrzeit *</label>
                                 <select id="time" name="time" required>
-                                    <option value="">Wählen...</option>
+                                    <option value="">Wählen</option>
                                     <option value="11:30">11:30</option>
                                     <option value="12:00">12:00</option>
-                                    <option value="12:30">12:30</option>
-                                    <option value="13:00">13:00</option>
-                                    <option value="13:30">13:30</option>
                                     <option value="18:00">18:00</option>
-                                    <option value="18:30">18:30</option>
                                     <option value="19:00">19:00</option>
-                                    <option value="19:30">19:30</option>
                                     <option value="20:00">20:00</option>
-                                    <option value="20:30">20:30</option>
-                                    <option value="21:00">21:00</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="guests">Personen *</label>
                                 <select id="guests" name="guests" required>
-                                    <option value="">Wählen...</option>
-                                    <option value="1">1 Person</option>
-                                    <option value="2">2 Personen</option>
-                                    <option value="3">3 Personen</option>
-                                    <option value="4">4 Personen</option>
-                                    <option value="5">5 Personen</option>
-                                    <option value="6">6 Personen</option>
-                                    <option value="7+">7+ Personen (bitte anrufen)</option>
+                                    <option value="">Wählen</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
                                 </select>
                             </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="notes">Besondere Wünsche</label>
-                            <textarea id="notes" name="notes" rows="3" placeholder="Allergien, Kinderstuhl, Geburtstag, glutenfrei, etc."></textarea>
-                        </div>
-                        
-                        <div class="form-notice">
-                            <small>💡 Vegetarische, vegane oder glutenfreie Gerichte? Kein Problem – geben Sie es einfach an!</small>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary btn-full">✓ Kostenlos reservieren</button>
+                        <button type="submit" class="btn-primary btn-full">Reservieren</button>
                     </form>
                 </div>
             </div>
@@ -496,21 +412,660 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="kontakt">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3 class="footer-logo">🦁 ZUM GOLDENEN LÖWEN</h3>
-                    <p>Traditionelles Wirtshaus seit 1987<br>Gutbürgerliche Küche in München</p>
-                    <div class="social-links">
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                    </div>
+                    <h4>ZUM GOLDENEN LÖWEN</h4>
+                    <p>Marktplatz 12<br>80331 München<br>+49 89 123 456 78</p>
                 </div>
-                
                 <div class="footer-links">
-                    <h4>Ö
+                    <h4>Social Media</h4>
+                    <a href="https://facebook.com">Facebook</a>
+                    <a href="https://instagram.com">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ZUM GOLDENEN LÖWEN</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+        
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Vielen Dank für Ihre Reservierung! Wir melden uns bei Ihnen.');
+        });
+    </script>
+</body>
+</html>
+Und hier das passende style.css:
+
+:root {
+    --color-primary: #1a1a1a;
+    --color-secondary: #c9a962;
+    --color-bg: #fafafa;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Top Bar */
+.top-bar {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.top-bar-info {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.top-bar a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.divider {
+    opacity: 0.5;
+}
+
+/* Navigation */
+.navbar {
+    background: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secondary);
+}
+
+.btn-reservierung {
+    background: var(--color-secondary);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 999;
+    padding: 80px 24px;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu ul {
+    list-style: none;
+}
+
+.mobile-menu li {
+    margin: 24px 0;
+}
+
+.mobile-menu a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.rating-badge {
+    margin-bottom: 16px;
+}
+
+.stars {
+    color: var(--color-secondary);
+}
+
+.rating {
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.reviews {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 14px 28px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/* Info Section */
+.info-section {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-item h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--color-text-light);
+}
+
+.info-item p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.info-item a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Speisekarte */
+.menu-section {
+    padding: 80px 0;
+    background: var(--color-bg);
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 48px;
+}
+
+.menu-category {
+    margin-bottom: 48px;
+}
+
+.menu-category > h3 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+.subcategory {
+    font-size: 18px;
+    color: var(--color-secondary);
+    margin: 32px 0 16px;
+}
+
+.menu-items {
+    display: grid;
+    gap: 16px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px;
+    background: #fff;
+}
+
+.item-info h4 {
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.item-info p {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.price {
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--color-secondary);
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: 16px;
+}
+
+.menu-items.sides {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.menu-items.sides .menu-item {
+    padding: 12px 16px;
+}
+
+/* Highlights */
+.highlights {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.highlight-card {
+    text-align: center;
+}
+
+.highlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.highlight-card h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.highlight-card p {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+/* Über uns */
+.about {
+    padding: 80px 0;
+    background: var(--color-bg);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.about-content p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Team */
+.team {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+/* Reservierung */
+.reservation {
+    padding: 80px 0;
+    background: var(--color-bg);
+}
+
+.reservation-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.reservation-info h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.reservation-info p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.reservation-info a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.reservation-form-wrapper {
+    background: #fff;
+    padding: 32px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.btn-full {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 14px;
+}
+
+/* Footer */
+.footer {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 48px 0 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+}
+
+.footer-brand h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+.footer-links h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.footer-links a {
+    display: block;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .nav-menu,
+    .btn-reservierung {
+        display: none;
+    }
+    
+    .mobile-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .mobile-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--color-primary);
+        margin: 6px 0;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .reservation-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-items.sides {
+        grid-template-columns: 1fr;
+    }
+}
