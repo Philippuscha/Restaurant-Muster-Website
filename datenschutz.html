@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz | ZUM GOLDENEN LÖWEN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .legal-page {
+            padding-top: 0;
+            background-color: var(--color-bg);
+            min-height: 100vh;
+        }
+        
+        .navbar {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+        
+        .navbar .logo,
+        .navbar .nav-menu a,
+        .navbar .btn-reservierung {
+            color: var(--color-white);
+        }
+        
+        .mobile-toggle span {
+            background: var(--color-white);
+        }
+        
+        .legal-header {
+            background: linear-gradient(135deg, #f5f0e6 0%, #e8dcc8 50%, #d4c4a8 100%);
+            color: var(--color-primary);
+            padding: 140px 0 80px 0;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--color-secondary);
+        }
+        
+        .legal-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='35' fill='none' stroke='%23c9a962' stroke-width='0.5' opacity='0.1'/%3E%3Ccircle cx='50' cy='50' r='25' fill='none' stroke='%23c9a962' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
+            background-size: 120px 120px;
+        }
+        
+        .legal-header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .legal-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--color-primary);
+        }
+        
+        .legal-content {
+            background: var(--color-white);
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+            border-radius: 4px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .legal-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-secondary);
+        }
+        
+        .legal-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .legal-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin: 30px 0 15px 0;
+        }
+        
+        .legal-content p, .legal-content li {
+            color: var(--color-text);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .legal-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .legal-content strong {
+            color: var(--color-primary);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 30px 0 60px 0;
+            padding: 15px 30px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            .legal-content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ZUM GOLDENEN LÖWEN</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#philosophie">Unser Versprechen</a></li>
+                <li><a href="speisekarte.html">Speisekarte</a></li>
+                <li><a href="index.html#ambiente">Ambiente</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="index.html#reservierung" class="btn-reservierung">Tisch reservieren</a>
+            <button class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="legal-page">
+        <div class="legal-header">
+            <div class="container">
+                <h1>Datenschutz</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="legal-content">
+                <h2>Datenschutzerklärung</h2>
+                <p>
+                    Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.
+                </p>
+
+                <h2>Verantwortlicher</h2>
+                <p>
+                    <strong>Zum Goldenen Löwen</strong><br>
+                    Familie Schröder<br>
+                    Marktplatz 12<br>
+                    80331 München<br>
+                    E-Mail: info@zum-goldenen-loewen.de
+                </p>
+
+                <h2>Datenerfassung auf unserer Website</h2>
+                <h3>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</h3>
+                <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+
+                <h3>Wie erfassen wir Ihre Daten?</h3>
+                <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.</p>
+                <p>Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere Website betreten.</p>
+
+                <h2>Kontaktformular</h2>
+                <p>
+                    Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                </p>
+
+                <h2>Cookies</h2>
+                <p>
+                    Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Webbrowser auf Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.
+                </p>
+                <p>
+                    Einige Cookies sind "Session-Cookies." Solche Cookies werden nach Ende Ihrer Browser-Sitzung von selbst gelöscht. Hingegen bleiben andere Cookies auf Ihrem Endgerät bestehen, bis Sie diese selbst löschen. Solche Cookies helfen uns, Sie bei Rückkehr auf unserer Website wiederzuerkennen.
+                </p>
+
+                <h2>Ihre Rechte</h2>
+                <p>Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren.</p>
+                
+                <p>Sie erreichen uns unter folgenden Kontaktdaten:</p>
+                <p>
+                    <strong>Zum Goldenen Löwen</strong><br>
+                    Marktplatz 12<br>
+                    80331 München<br>
+                    E-Mail: info@zum-goldenen-loewen.de
+                </p>
+            </div>
+
+            <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">ZUM GOLDENEN LÖWEN</h3>
+                    <p>Regionale Küche mit Herz seit 1987</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ZUM GOLDENEN LÖWEN. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
