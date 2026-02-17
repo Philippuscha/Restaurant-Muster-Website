@@ -936,14 +936,3 @@ h1, h2, h3 {
         padding: 1.5rem;
     }
 }
-Wichtige Änderung: Ich habe die .hero-image Klasse hinzugefügt (Zeilen 216-224):
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
