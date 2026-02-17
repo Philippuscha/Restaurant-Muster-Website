@@ -9,31 +9,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         .speisekarte-page {
-            padding-top: 100px;
+            padding-top: 0;
             background-color: var(--color-bg);
             min-height: 100vh;
+        }
+        
+        /* Dunkle Navigation für diese Seite */
+        .navbar {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+        
+        .navbar .logo,
+        .navbar .nav-menu a,
+        .navbar .btn-reservierung {
+            color: var(--color-white);
+        }
+        
+        .navbar .nav-menu a:hover {
+            color: var(--color-secondary);
+        }
+        
+        .mobile-toggle span {
+            background: var(--color-white);
         }
         
         .speisekarte-header {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
             color: var(--color-white);
-            padding: 80px 0;
+            padding: 140px 0 100px 0;
             text-align: center;
             margin-bottom: 60px;
             position: relative;
             overflow: hidden;
         }
         
+        /* Goldene Löwen als Hintergrundmuster */
         .speisekarte-header::before {
-            content: '';
+            content: '🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="80" fill="rgba(201,169,98,0.03)">🍽</text></svg>');
-            background-repeat: repeat;
-            background-size: 100px 100px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            letter-spacing: 30px;
+            opacity: 0.08;
+            white-space: nowrap;
+            text-shadow: 0 0 30px rgba(201, 169, 98, 0.3);
+        }
+        
+        .speisekarte-header::after {
+            content: '🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁 🦁';
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            letter-spacing: 30px;
+            opacity: 0.05;
+            white-space: nowrap;
         }
         
         .speisekarte-header .container {
@@ -47,7 +81,8 @@
             letter-spacing: 8px;
             text-transform: uppercase;
             font-weight: 400;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: var(--color-white);
         }
         
         .speisekarte-header p {
@@ -55,6 +90,7 @@
             opacity: 0.9;
             font-weight: 300;
             letter-spacing: 2px;
+            color: var(--color-white);
         }
         
         .speisekarte-header .decoration {
@@ -248,9 +284,19 @@
         }
         
         @media (max-width: 768px) {
+            .speisekarte-header {
+                padding: 120px 0 60px 0;
+            }
+            
             .speisekarte-header h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
                 letter-spacing: 4px;
+            }
+            
+            .speisekarte-header::before,
+            .speisekarte-header::after {
+                font-size: 30px;
+                letter-spacing: 15px;
             }
             
             .menu-category {
@@ -734,38 +780,4 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3 class="footer-logo">ZUM GOLDENEN LÖWEN</h3>
-                    <p>Regionale Küche mit Herz seit 1987</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html#philosophie">Unser Versprechen</a></li>
-                        <li><a href="speisekarte.html">Speisekarte</a></li>
-                        <li><a href="index.html#ambiente">Ambiente</a></li>
-                        <li><a href="index.html#team">Team</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Rechtliches</h4>
-                    <ul>
-                        <li><a href="#">Impressum</a></li>
-                        <li><a href="#">Datenschutz</a></li>
-                        <li><a href="#">AGB</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Kontakt</h4>
-                    <p>Marktplatz 12<br>80331 München</p>
-                    <p>+49 89 123 456 78</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ZUM GOLDENEN LÖWEN. Alle Rechte vorbehalten.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+                    <h3 class="footer-logo">ZUM GOLDENEN LÖWEN</h3
