@@ -3,127 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum | ZUM GOLDENEN LÖWEN</title>
+    <title>ZUM GOLDENEN LÖWEN | Regionale Küche mit Herz</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        .legal-page { padding-top: 0; background-color: var(--color-bg); min-height: 100vh; }
-        .navbar { background: rgba(26, 26, 26, 0.98); box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-        .navbar .logo, .navbar .nav-menu a, .navbar .btn-reservierung { color: var(--color-white); }
-        .mobile-toggle span { background: var(--color-white); }
-        .legal-header {
-            background: linear-gradient(135deg, #f5f0e6 0%, #e8dcc8 50%, #d4c4a8 100%);
-            color: var(--color-primary);
-            padding: 140px 0 80px 0;
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 4px solid var(--color-secondary);
-        }
-        .legal-header::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='35' fill='none' stroke='%23c9a962' stroke-width='0.5' opacity='0.1'/%3E%3Ccircle cx='50' cy='50' r='25' fill='none' stroke='%23c9a962' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
-            background-size: 120px 120px;
-        }
-        .legal-header .container { position: relative; z-index: 1; }
-        .legal-header h1 { font-size: 3rem; margin-bottom: 1rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 500; color: var(--color-primary); }
-        .legal-content {
-            background: var(--color-white);
-            padding: 60px;
-            margin-bottom: 60px;
-            box-shadow: var(--shadow);
-            border-radius: 4px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .legal-content h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-primary); margin: 40px 0 20px 0; padding-bottom: 10px; border-bottom: 2px solid var(--color-secondary); }
-        .legal-content h2:first-child { margin-top: 0; }
-        .legal-content p { color: var(--color-text); line-height: 1.8; margin-bottom: 15px; }
-        .legal-content strong { color: var(--color-primary); }
-        .back-link {
-            display: inline-flex; align-items: center; gap: 10px; margin: 30px 0 60px 0; padding: 15px 30px;
-            background: var(--color-primary); color: var(--color-white); font-weight: 500; text-decoration: none;
-            border-radius: 4px; transition: all 0.3s ease;
-        }
-        .back-link:hover { background: var(--color-secondary); transform: translateY(-2px); }
-        @media (max-width: 768px) {
-            .legal-header h1 { font-size: 2rem; }
-            .legal-content { padding: 30px; }
-        }
-    </style>
+    <!-- QR-Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">ZUM GOLDENEN LÖWEN</a>
             <ul class="nav-menu">
-                <li><a href="index.html#philosophie">Unser Versprechen</a></li>
+                <li><a href="#philosophie">Unser Versprechen</a></li>
                 <li><a href="speisekarte.html">Speisekarte</a></li>
                 <li><a href="ambiente.html">Ambiente</a></li>
-                <li><a href="index.html#team">Team</a></li>
-                <li><a href="index.html#kontakt">Kontakt</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
-            <a href="index.html#reservierung" class="btn-reservierung">Tisch reservieren</a>
-            <button class="mobile-toggle"><span></span><span></span><span></span></button>
+            <a href="#reservierung" class="btn-reservierung">Tisch reservieren</a>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <div class="legal-page">
-        <div class="legal-header">
-            <div class="container">
-                <h1>Impressum</h1>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="legal-content">
-                <h2>Angaben gemäß § 5 TMG</h2>
-                <p>
-                    <strong>Zum Goldenen Löwen</strong><br>
-                    Familie Schröder<br>
-                    Marktplatz 12<br>
-                    80331 München<br>
-                    Deutschland
-                </p>
-
-                <h2>Kontakt</h2>
-                <p>
-                    Telefon: +49 89 123 456 78<br>
-                    E-Mail: info@zum-goldenen-loewen.de<br>
-                    Website: www.zum-goldenen-loewen.de
-                </p>
-
-                <h2>Umsatzsteuer-ID</h2>
-                <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>DE 123 456 789</p>
-
-                <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-                <p>Peter Schröder<br>Marktplatz 12<br>80331 München</p>
-
-                <h2>Haftung für Inhalte</h2>
-                <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-
-                <h2>Haftung für Links</h2>
-                <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
-
-                <h2>Urheberrecht</h2>
-                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.</p>
-            </div>
-
-            <a href="index.html" class="back-link">← Zurück zur Startseite</a>
-        </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#philosophie">Unser Versprechen</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="ambiente.html">Ambiente</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#reservierung" class="btn-primary">Tisch reservieren</a></li>
+        </ul>
     </div>
 
-    <footer class="footer">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-image" style="background-image: url('images/hero.png');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">ZUM GOLDENEN LÖWEN</h1>
+            <p class="hero-subtitle">Regionale Küche mit Herz seit 1987</p>
+            
+            <!-- Google Bewertung - Edel ohne Box -->
+            <a href="https://g.co/kgs/DEIN_LINK" target="_blank" rel="noopener" style="text-decoration: none; margin-top: 30px; display: inline-block;">
+                <div style="display: flex; align-items: center; gap: 20px; color: white; padding: 15px 0; border-top: 1px solid rgba(201,169,98,0.6); border-bottom: 1px solid rgba(201,169,98,0.6); font-family: var(--font-display); letter-spacing: 2px; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(201,169,98,1)'; this.style.letterSpacing='3px';" onmouseout="this.style.borderColor='rgba(201,169,98,0.6)'; this.style.letterSpacing='2px';">
+                    <span style="color: #c9a962; font-size: 1.2rem; letter-spacing: 4px;">★★★★★</span>
+                    <span style="font-size: 1.5rem; font-weight: 500;">4,8</span>
+                    <span style="width: 1px; height: 20px; background: rgba(201,169,98,0.5);"></span>
+                    <span style="font-size: 0.9rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 3px;">237 Bewertungen</span>
+                </div>
+            </a>
+            
+            <div style="margin-top: 30px;">
+                <a href="#reservierung" class="btn-primary">Tisch reservieren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophie Section -->
+    <section class="philosophie" id="philosophie">
+        <div class="container">
+            <p class="philosophie-text">
+                "Gutes Essen verbindet Menschen.<br>
+                Bei uns finden Sie Geborgenheit, Geschmack und echte Gastfreundschaft."
+            </p>
+            <p class="philosophie-author">— Familie Schröder & Team</p>
+        </div>
+    </section>
+
+    <!-- QR-Code Section - Digital Speisekarte (OHNE Löwen-Icon) -->
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #f9f7f4 0%, #f0ebe3 100%);">
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap;">
+                
+                <!-- Text -->
+                <div style="text-align: center; max-width: 400px;">
+                    <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--color-primary); margin-bottom: 20px;">Speisekarte digital</h2>
+                    <p style="color: var(--color-text-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;">
+                        Scannen Sie den Code mit Ihrem Smartphone, um unsere aktuelle Speisekarte direkt auf Ihrem Gerät zu öffnen.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--color-secondary); font-weight: 500;">
+                        <span>📱</span>
+                        <span>Einfach scannen & genießen</span>
+                    </div>
+                </div>
+                
+                <!-- QR-Code Container (OHNE Icon in der Mitte) -->
+                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 3px solid var(--color-secondary); position: relative;">
+                    <div id="qrcode" style="width: 200px; height: 200px;"></div>
+                    
+                    <!-- Dekorative Ecken -->
+                    <div style="position: absolute; top: -10px; left: -10px; width: 30px; height: 30px; border-top: 3px solid var(--color-secondary); border-left: 3px solid var(--color-secondary);"></div>
+                    <div style="position: absolute; top: -10px; right: -10px; width: 30px; height: 30px; border-top: 3px solid var(--color-secondary); border-right: 3px solid var(--color-secondary);"></div>
+                    <div style="position: absolute; bottom: -10px; left: -10px; width: 30px; height: 30px; border-bottom: 3px solid var(--color-secondary); border-left: 3px solid var(--color-secondary);"></div>
+                    <div style="position: absolute; bottom: -10px; right: -10px; width: 30px; height: 30px; border-bottom: 3px solid var(--color-secondary); border-right: 3px solid var(--color-secondary);"></div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Dishes -->
+    <section class="signature-dishes" id="speisekarte">
+        <div class="container">
+            <h2 class="section-title">Unsere beliebtesten Gerichte</h2>
+            <p class="section-subtitle">Gutbürgerliche Küche, saisonal und frisch zubereitet</p>
+            
+            <div class="dishes-grid eight-dishes">
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/schnitzel.png" alt="Wiener Schnitzel">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Wiener Schnitzel</h3>
+                        <p>Vom Kalb, paniert, mit hausgemachtem Kartoffelsalat und Zitrone</p>
+                        <span class="dish-price">€ 19,50</span>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/schweinebraten.png" alt="Schweinebraten">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Schweinebraten</h3>
+                        <p>Aus der Schulter, 24h mariniert, mit Semmelknödel und Rotkohl</p>
+                        <span class="dish-price">€ 17,90</span>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/käsespätzle.png" alt="Käsespätzle">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Allgäuer Käsespätzle</h3>
+                        <p>Hausgemachte Spätzle, überbacken mit Bergkäse und Röstzwiebeln</p>
+                        <span class="dish-price">€ 14,50</span>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/forelle.png" alt="Forelle">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Forelle Müllerin</h3>
+                        <p>Frisch aus der Region, in Butter gebraten, mit Mandeln und Petersilie</p>
+                        <span class="dish-price">€ 18,90</span>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/schweinshaxe.png" alt="Schweinshaxe">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Knusprige Haxe</h3>
+                        <p>Gebratene Schweinshaxe, mit Sauerkraut, Kartoffelknödeln und Soße</p>
+                        <span class="dish-price">€ 21,50</span>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/rinderroulade.png" alt="Rinderroulade">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Rinderroulade</h3>
+                        <p>Mit Speck und Gurke gefüllt, in Rotweinsauce geschmort</p>
+                        <span class="dish-price">€ 22,90</span>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/maultaschen.png" alt="Maultaschen">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Schwäbische Maultaschen</h3>
+                        <p>Hausgemacht, mit Zwiebelschmelze und Butterbröseln</p>
+                        <span class="dish-price">€ 15,50</span>
+                    </div>
+                </div>
+                
+                <div class="dish-card">
+                    <div class="dish-image">
+                        <img src="images/kaiserschmarn.png" alt="Apfelstrudel">
+                    </div>
+                    <div class="dish-info">
+                        <h3>Apfelstrudel</h3>
+                        <p>Warm serviert mit Vanilleeis und hausgemachter Vanillesauce</p>
+                        <span class="dish-price">€ 8,90</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speisekarte-actions" style="text-align: center; margin-top: 50px;">
+                <a href="speisekarte.html" class="btn-secondary">Komplette Speisekarte ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambiente Section -->
+    <section class="ambiente" id="ambiente">
+        <div class="ambiente-content">
+            <div class="ambiente-text">
+                <h2>Gemütlichkeit mit Stil</h2>
+                <p>Echtes Holz, warmes Licht und eine Atmosphäre zum Wohlfühlen. Unser uriger Gastraum vereint Tradition mit zeitlosem Charme.</p>
+                <a href="ambiente.html" class="btn-primary">Ambiente entdecken</a>
+            </div>
+        </div>
+        <div class="ambiente-gallery">
+            <div class="gallery-item">
+                <img src="images/bar.png" alt="Bar">
+            </div>
+            <div class="gallery-item">
+                <img src="images/biergarten.png" alt="Biergarten">
+            </div>
+            <div class="gallery-item">
+                <img src="images/tisch.png" alt="Gedeckter Tisch">
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Unser Team</h2>
+            <p class="section-subtitle">Mit Leidenschaft und Herzlichkeit für Sie da</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="images/schröder.png" alt="Peter Schröder">
+                    </div>
+                    <h3>Peter Schröder</h3>
+                    <p class="team-role">Gastgeber & Wirt</p>
+                    <p class="team-bio">35 Jahre alt, seit 2010 an Bord. Sein Motto: Jeder Gast ist ein Freund.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&fit=crop&auto=format&q=80" alt="Maria Schröder">
+                    </div>
+                    <h3>Maria Schröder</h3>
+                    <p class="team-role">Küchenchefin</p>
+                    <p class="team-bio">Kocht mit Rezepten ihrer Großmutter und regionalen Zutaten.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&fit=crop&auto=format&q=80" alt="Thomas Weber">
+                    </div>
+                    <h3>Thomas Weber</h3>
+                    <p class="team-role">Chefkoch</p>
+                    <p class="team-bio">Fachmann für traditionelle deutsche Küche mit kreativen Akzenten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation" id="reservierung">
+        <div class="container">
+            <div class="reservation-wrapper">
+                <div class="reservation-info">
+                    <h2>Reservieren Sie Ihren Tisch</h2>
+                    <p>Wir freuen uns auf Ihren Besuch! Reservieren Sie bequem online oder rufen Sie uns an.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <div>
+                                <strong>Adresse</strong>
+                                <p>Marktplatz 12<br>80331 München</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            <div>
+                                <strong>Telefon</strong>
+                                <p>+49 89 123 456 78</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            <div>
+                                <strong>Öffnungszeiten</strong>
+                                <p>Mo–Sa: 11:30 – 23:00 Uhr<br>So: 11:00 – 21:00 Uhr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reservation-form-wrapper">
+                    <form class="reservation-form" id="reservationForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-Mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Datum *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Uhrzeit *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Wählen...</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="12:30">12:30</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="18:30">18:30</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Personen *</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">Wählen...</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 Personen</option>
+                                    <option value="3">3 Personen</option>
+                                    <option value="4">4 Personen</option>
+                                    <option value="5">5 Personen</option>
+                                    <option value="6">6 Personen</option>
+                                    <option value="7+">7+ Personen (bitte anrufen)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">Besondere Wünsche</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Allergien, Anlässe, etc."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-full">Tisch reservieren</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="kontakt">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3 class="footer-logo">ZUM GOLDENEN LÖWEN</h3>
                     <p>Regionale Küche mit Herz seit 1987</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#philosophie">Unser Versprechen</a></li>
+                        <li><a href="speisekarte.html">Speisekarte</a></li>
+                        <li><a href="ambiente.html">Ambiente</a></li>
+                        <li><a href="#team">Team</a></li>
+                    </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Rechtliches</h4>
@@ -133,11 +409,48 @@
                         <li><a href="agb.html">AGB</a></li>
                     </ul>
                 </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p>Marktplatz 12<br>80331 München</p>
+                    <p>+49 89 123 456 78</p>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 ZUM GOLDENEN LÖWEN. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Instagram Floating Button -->
+    <a href="https://www.instagram.com/zumgoldenenloewen" target="_blank" rel="noopener noreferrer" 
+       style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; 
+              background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+              border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+              box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; transition: all 0.3s ease; text-decoration: none;"
+       onmouseover="this.style.transform='scale(1.1) rotate(5deg)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.4)';" 
+       onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.3)';">
+        
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+    </a>
+
+    <!-- QR-Code Generierung -->
+    <script>
+        window.onload = function() {
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: "https://philippuscha.github.io/Restaurant-Muster-Website/speisekarte.html",
+                width: 200,
+                height: 200,
+                colorDark : "#1a1a1a",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        };
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
