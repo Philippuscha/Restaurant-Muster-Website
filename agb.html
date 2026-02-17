@@ -8,27 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        .legal-page {
-            padding-top: 0;
-            background-color: var(--color-bg);
-            min-height: 100vh;
-        }
-        
-        .navbar {
-            background: rgba(26, 26, 26, 0.98);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-        }
-        
-        .navbar .logo,
-        .navbar .nav-menu a,
-        .navbar .btn-reservierung {
-            color: var(--color-white);
-        }
-        
-        .mobile-toggle span {
-            background: var(--color-white);
-        }
-        
+        .legal-page { padding-top: 0; background-color: var(--color-bg); min-height: 100vh; }
+        .navbar { background: rgba(26, 26, 26, 0.98); box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+        .navbar .logo, .navbar .nav-menu a, .navbar .btn-reservierung { color: var(--color-white); }
+        .mobile-toggle span { background: var(--color-white); }
         .legal-header {
             background: linear-gradient(135deg, #f5f0e6 0%, #e8dcc8 50%, #d4c4a8 100%);
             color: var(--color-primary);
@@ -39,32 +22,15 @@
             overflow: hidden;
             border-bottom: 4px solid var(--color-secondary);
         }
-        
         .legal-header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='35' fill='none' stroke='%23c9a962' stroke-width='0.5' opacity='0.1'/%3E%3Ccircle cx='50' cy='50' r='25' fill='none' stroke='%23c9a962' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
             background-size: 120px 120px;
         }
-        
-        .legal-header .container {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .legal-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: var(--color-primary);
-        }
-        
+        .legal-header .container { position: relative; z-index: 1; }
+        .legal-header h1 { font-size: 3rem; margin-bottom: 1rem; letter-spacing: 6px; text-transform: uppercase; font-weight: 500; color: var(--color-primary); }
         .legal-content {
             background: var(--color-white);
             padding: 60px;
@@ -75,57 +41,19 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
-        .legal-content h2 {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            color: var(--color-primary);
-            margin: 40px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--color-secondary);
-        }
-        
-        .legal-content h2:first-child {
-            margin-top: 0;
-        }
-        
-        .legal-content p {
-            color: var(--color-text);
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-        
-        .legal-content strong {
-            color: var(--color-primary);
-        }
-        
+        .legal-content h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-primary); margin: 40px 0 20px 0; padding-bottom: 10px; border-bottom: 2px solid var(--color-secondary); }
+        .legal-content h2:first-child { margin-top: 0; }
+        .legal-content p { color: var(--color-text); line-height: 1.8; margin-bottom: 15px; }
+        .legal-content strong { color: var(--color-primary); }
         .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin: 30px 0 60px 0;
-            padding: 15px 30px;
-            background: var(--color-primary);
-            color: var(--color-white);
-            font-weight: 500;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            display: inline-flex; align-items: center; gap: 10px; margin: 30px 0 60px 0; padding: 15px 30px;
+            background: var(--color-primary); color: var(--color-white); font-weight: 500; text-decoration: none;
+            border-radius: 4px; transition: all 0.3s ease;
         }
-        
-        .back-link:hover {
-            background: var(--color-secondary);
-            transform: translateY(-2px);
-        }
-        
+        .back-link:hover { background: var(--color-secondary); transform: translateY(-2px); }
         @media (max-width: 768px) {
-            .legal-header h1 {
-                font-size: 2rem;
-            }
-            
-            .legal-content {
-                padding: 30px;
-            }
+            .legal-header h1 { font-size: 2rem; }
+            .legal-content { padding: 30px; }
         }
     </style>
 </head>
@@ -136,16 +64,12 @@
             <ul class="nav-menu">
                 <li><a href="index.html#philosophie">Unser Versprechen</a></li>
                 <li><a href="speisekarte.html">Speisekarte</a></li>
-                <li><a href="index.html#ambiente">Ambiente</a></li>
+                <li><a href="ambiente.html">Ambiente</a></li>
                 <li><a href="index.html#team">Team</a></li>
                 <li><a href="index.html#kontakt">Kontakt</a></li>
             </ul>
             <a href="index.html#reservierung" class="btn-reservierung">Tisch reservieren</a>
-            <button class="mobile-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="mobile-toggle"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
@@ -159,59 +83,27 @@
         <div class="container">
             <div class="legal-content">
                 <h2>1. Geltungsbereich</h2>
-                <p>
-                    Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Reservierungen und Verträge zwischen dem Restaurant "Zum Goldenen Löwen" und seinen Gästen.
-                </p>
+                <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Reservierungen und Verträge zwischen dem Restaurant "Zum Goldenen Löwen" und seinen Gästen.</p>
 
                 <h2>2. Reservierungen</h2>
-                <p>
-                    Reservierungen können telefonisch, persönlich oder über unser Online-Formular vorgenommen werden. Eine Reservierung ist erst nach schriftlicher oder telefonischer Bestätigung durch uns verbindlich.
-                </p>
-                <p>
-                    Bei Reservierungen für mehr als 10 Personen behalten wir uns vor, eine Anzahlung zu verlangen.
-                </p>
+                <p>Reservierungen können telefonisch, persönlich oder über unser Online-Formular vorgenommen werden. Eine Reservierung ist erst nach Bestätigung durch uns verbindlich.</p>
 
                 <h2>3. Stornierung</h2>
-                <p>
-                    Sollten Sie Ihre Reservierung nicht wahrnehmen können, bitten wir um eine kurze Nachricht. Bei Stornierungen weniger als 24 Stunden vor dem reservierten Termin behalten wir uns vor, bei wiederholtem Nichterscheinen eine Stornogebühr zu erheben.
-                </p>
-                <p>
-                    Für Reservierungen ab 20 Personen gilt eine Stornofrist von 48 Stunden.
-                </p>
+                <p>Sollten Sie Ihre Reservierung nicht wahrnehmen können, bitten wir um eine kurze Nachricht. Bei Stornierungen weniger als 24 Stunden vor dem reservierten Termin behalten wir uns vor, bei wiederholtem Nichterscheinen eine Stornogebühr zu erheben.</p>
 
                 <h2>4. Preise und Zahlung</h2>
-                <p>
-                    Alle angegebenen Preise verstehen sich in Euro und inklusive der gesetzlichen Mehrwertsteuer. Die Bezahlung erfolgt vor Ort in bar oder mit gängigen Kreditkarten (Visa, Mastercard, EC-Karte).
-                </p>
+                <p>Alle angegebenen Preise verstehen sich in Euro und inklusive der gesetzlichen Mehrwertsteuer. Die Bezahlung erfolgt vor Ort in bar oder mit gängigen Kreditkarten.</p>
 
                 <h2>5. Haftung</h2>
-                <p>
-                    Für mitgebrachte Gegenstände haften wir nur bei Vorsatz oder grober Fahrlässigkeit. Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit keine Verletzung wesentlicher Vertragspflichten vorliegt.
-                </p>
+                <p>Für mitgebrachte Gegenstände haften wir nur bei Vorsatz oder grober Fahrlässigkeit.</p>
 
                 <h2>6. Hausrecht</h2>
-                <p>
-                    Wir behalten uns das Hausrecht vor. Gästen, die sich nicht den allgemein üblichen Gepflogenheiten entsprechend verhalten oder andere Gäste stören, kann der Aufenthalt im Restaurant untersagt werden.
-                </p>
+                <p>Wir behalten uns das Hausrecht vor. Gästen, die sich nicht den allgemein üblichen Gepflogenheiten entsprechend verhalten, kann der Aufenthalt untersagt werden.</p>
 
                 <h2>7. Speisen und Getränke</h2>
-                <p>
-                    Mitgebrachte Speisen und Getränke sind nicht gestattet. Ausnahmen können nach Absprache für besondere Anlässe (z.B. eigene Torte zum Geburtstag) gemacht werden. Hierfür erheben wir eine Korkagegebühr von € 5,00 pro Person.
-                </p>
+                <p>Mitgebrachte Speisen und Getränke sind nicht gestattet. Ausnahmen können nach Absprache gemacht werden (Korkage € 5,00 pro Person).</p>
 
-                <h2>8. Speisekarte und Allergene</h2>
-                <p>
-                    Unsere Speisekarte ändert sich saisonal. Bitte informieren Sie uns bei Allergien oder Unverträglichkeiten vor Bestellung. Wir weisen darauf hin, dass wir in unserer Küche mit verschiedenen Allergenen arbeiten.
-                </p>
-
-                <h2>9. Schlussbestimmungen</h2>
-                <p>
-                    Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt der Rest der Bedingungen davon unberührt. Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist München.
-                </p>
-                
-                <p style="margin-top: 40px; font-style: italic;">
-                    Stand: Februar 2026
-                </p>
+                <p style="margin-top: 40px; font-style: italic;">Stand: Februar 2026</p>
             </div>
 
             <a href="index.html" class="back-link">← Zurück zur Startseite</a>
