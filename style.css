@@ -917,6 +917,11 @@ h1, h2, h3 {
     .modal-content {
         padding: 2rem;
     }
+    
+    /* QR-Code auf Smartphones ausblenden */
+    .qr-section {
+        display: none !important;
+    }
 }
 
 @media (max-width: 480px) {
