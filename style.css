@@ -930,7 +930,7 @@ h1, h2, h3 {
     }
     
     /* QR-Code auf Smartphones ausblenden */
-    section[style*="qr"] {
+    .qr-section {
         display: none !important;
     }
 }
