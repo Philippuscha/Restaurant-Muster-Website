@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambiente | ZUM GOLDENEN LÖWEN</title>
+    <title>Speisekarte | ZUM GOLDENEN LÖWEN</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        .ambiente-page {
+        .speisekarte-page {
             padding-top: 0;
             background-color: var(--color-bg);
             min-height: 100vh;
@@ -29,10 +29,10 @@
             background: var(--color-white);
         }
         
-        .ambiente-header {
+        .speisekarte-header {
             background: linear-gradient(135deg, #f5f0e6 0%, #e8dcc8 50%, #d4c4a8 100%);
             color: var(--color-primary);
-            padding: 140px 0 80px 0;
+            padding: 140px 0 100px 0;
             text-align: center;
             margin-bottom: 60px;
             position: relative;
@@ -40,7 +40,7 @@
             border-bottom: 4px solid var(--color-secondary);
         }
         
-        .ambiente-header::before {
+        .speisekarte-header::before {
             content: '';
             position: absolute;
             top: 0;
@@ -51,21 +51,22 @@
             background-size: 120px 120px;
         }
         
-        .ambiente-header .container {
+        .speisekarte-header .container {
             position: relative;
             z-index: 1;
         }
         
-        .ambiente-header h1 {
-            font-size: 3rem;
+        .speisekarte-header h1 {
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             text-transform: uppercase;
             font-weight: 500;
             color: var(--color-primary);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
         
-        .ambiente-header p {
+        .speisekarte-header p {
             font-size: 1.3rem;
             opacity: 0.9;
             font-weight: 400;
@@ -73,95 +74,208 @@
             color: var(--color-text);
         }
         
-        .ambiente-intro {
+        .speisekarte-header .decoration {
+            width: 120px;
+            height: 3px;
+            background: var(--color-secondary);
+            margin: 25px auto;
+            position: relative;
+        }
+        
+        .speisekarte-header .decoration::before,
+        .speisekarte-header .decoration::after {
+            content: '♦';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-secondary);
+            font-size: 12px;
+        }
+        
+        .speisekarte-header .decoration::before {
+            left: -20px;
+        }
+        
+        .speisekarte-header .decoration::after {
+            right: -20px;
+        }
+        
+        .menu-intro {
             text-align: center;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto 60px auto;
             padding: 0 20px;
         }
         
-        .ambiente-intro p {
-            font-size: 1.2rem;
+        .menu-intro p {
+            font-size: 1.1rem;
             line-height: 1.8;
             color: var(--color-text-light);
             font-style: italic;
         }
         
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+        .menu-section {
             margin-bottom: 60px;
         }
         
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px;
+        .menu-category {
+            background: var(--color-white);
+            padding: 50px;
+            margin-bottom: 40px;
             box-shadow: var(--shadow);
-            aspect-ratio: 4/3;
+            border-radius: 4px;
+            position: relative;
         }
         
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .gallery-item.large {
-            grid-column: span 2;
-            aspect-ratio: 21/9;
-        }
-        
-        .gallery-caption {
+        .menu-category::before {
+            content: '';
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 30px 20px 20px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-secondary), #d4b978, var(--color-secondary));
+        }
+        
+        .menu-category h2 {
             font-family: var(--font-display);
-            font-size: 1.3rem;
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--color-secondary);
+            display: inline-block;
+            position: relative;
         }
         
-        .features-section {
-            background: var(--color-white);
-            padding: 60px;
-            margin-bottom: 60px;
-            box-shadow: var(--shadow);
-            border-radius: 4px;
+        .menu-category h2::after {
+            content: '❦';
+            position: absolute;
+            right: -40px;
+            top: 0;
+            color: var(--color-secondary);
+            font-size: 1.5rem;
         }
         
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            text-align: center;
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 25px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
         }
         
-        .feature-item h3 {
+        .menu-item:hover {
+            background: #fafafa;
+            margin: 0 -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .menu-item-info p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .menu-item-price {
             font-family: var(--font-display);
             font-size: 1.5rem;
-            color: var(--color-primary);
-            margin-bottom: 15px;
+            color: var(--color-secondary);
+            font-weight: 600;
+            white-space: nowrap;
+            margin-left: 30px;
         }
         
-        .feature-item p {
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .drink-category {
+            background: var(--color-white);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            border-radius: 4px;
+            border-top: 4px solid var(--color-secondary);
+        }
+        
+        .drink-category h3 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--color-primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* KORRIGIERTE DRINK-ITEM STYLES */
+        .drink-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 14px 0;
+            border-bottom: 1px dotted #e0e0e0;
+            transition: all 0.2s ease;
+            gap: 15px;
+        }
+        
+        .drink-item:hover {
+            color: var(--color-secondary);
+        }
+        
+        .drink-item span:first-child {
+            color: var(--color-text);
+            flex: 1;
+            line-height: 1.4;
+        }
+        
+        .drink-item span:last-child {
+            color: var(--color-secondary);
+            font-weight: 600;
+            white-space: nowrap;
+            text-align: right;
+            flex-shrink: 0;
+        }
+        
+        .allergen-hinweis {
+            background: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+            padding: 30px;
+            margin: 50px 0;
+            font-size: 0.9rem;
             color: var(--color-text-light);
-            line-height: 1.6;
+            border-left: 5px solid var(--color-secondary);
+            border-radius: 0 4px 4px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .allergen-hinweis strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
         }
         
         .back-link {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            margin: 30px 0 60px 0;
+            margin: 50px 0;
             padding: 15px 30px;
             background: var(--color-primary);
             color: var(--color-white);
@@ -174,34 +288,55 @@
         .back-link:hover {
             background: var(--color-secondary);
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201, 169, 98, 0.3);
         }
         
         @media (max-width: 768px) {
-            .ambiente-header h1 {
+            .speisekarte-header {
+                padding: 120px 0 60px 0;
+            }
+            
+            .speisekarte-header h1 {
                 font-size: 2rem;
+                letter-spacing: 4px;
             }
             
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-item.large {
-                grid-column: span 1;
-                aspect-ratio: 4/3;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .features-section {
+            .menu-category {
                 padding: 30px;
+            }
+            
+            .menu-category h2::after {
+                display: none;
+            }
+            
+            .menu-item {
+                flex-direction: column;
+            }
+            
+            .menu-item:hover {
+                margin: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            
+            .menu-item-price {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .drink-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .drink-item span:last-child {
+                text-align: left;
             }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">ZUM GOLDENEN LÖWEN</a>
             <ul class="nav-menu">
@@ -212,7 +347,7 @@
                 <li><a href="index.html#kontakt">Kontakt</a></li>
             </ul>
             <a href="index.html#reservierung" class="btn-reservierung">Tisch reservieren</a>
-            <button class="mobile-toggle">
+            <button class="mobile-toggle" id="mobileToggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -220,81 +355,445 @@
         </div>
     </nav>
 
-    <div class="ambiente-page">
-        <div class="ambiente-header">
+    <div class="speisekarte-page">
+        <div class="speisekarte-header">
             <div class="container">
-                <h1>Unser Ambiente</h1>
-                <p>Gemütlichkeit mit Stil seit 1987</p>
+                <h1>Unsere Speisekarte</h1>
+                <div class="decoration"></div>
+                <p>Regionale Küche mit Herz – frisch zubereitet für Sie</p>
             </div>
         </div>
 
         <div class="container">
-            <div class="ambiente-intro">
-                <p>Willkommen im Goldenen Löwen – wo traditionelle Gemütlichkeit auf zeitlose Eleganz trifft. Lassen Sie sich von unserem einladenden Ambiente verführen und genießen Sie unbeschwerte Stunden in historischem Flair.</p>
+            <div class="menu-intro">
+                <p>"Gutes Essen ist die Grundlage des wahren Glücks." – Auguste Escoffier. Bei uns finden Sie traditionelle deutsche Küche, zubereitet mit den besten regionalen Zutaten und viel Liebe zum Detail.</p>
             </div>
 
-            <div class="gallery-grid">
-                <div class="gallery-item large">
-                    <img src="images/hero.png" alt="Gastraum">
-                    <div class="gallery-caption">Unser historischer Gastraum mit originalem Holzbalken</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="images/bar.png" alt="Bar">
-                    <div class="gallery-caption">Die gemütliche Bar</div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="images/biergarten.png" alt="Biergarten">
-                    <div class="gallery-caption">Idyllischer Biergarten</div>
-                </div>
-                
-                <div class="gallery-item large">
-                    <img src="images/tisch.png" alt="Gedeckter Tisch">
-                    <div class="gallery-caption">Festlich gedeckt für besondere Anlässe</div>
-                </div>
-            </div>
-
-            <div class="features-section">
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>🍽️ Historischer Gastraum</h3>
-                        <p>Originale Holzbalkendecken, warmes Licht und liebevoll restaurierte Details schaffen eine Atmosphäre zum Wohlfühlen.</p>
+            <!-- Kalte Speisen -->
+            <section class="menu-section">
+                <div class="menu-category">
+                    <h2>Kalte Speisen & Vorspeisen</h2>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Obazda mit Brezeln</h3>
+                            <p>Hausgemachter bayerischer Käseaufstrich mit Zwiebeln und Kräutern, dazu frische Brezeln und Radi</p>
+                        </div>
+                        <div class="menu-item-price">€ 9,90</div>
                     </div>
                     
-                    <div class="feature-item">
-                        <h3>🌳 Biergarten</h3>
-                        <p>Im Sommer lädt unser idyllischer Biergarten unter alten Kastanien zum Verweilen ein – gemütlich und familienfreundlich.</p>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Wurstsalat "Bayerisch"</h3>
+                            <p>Schweizer Wurstsalat mit Käse, Gurken und Zwiebeln in hausgemachter Marinade, dazu Bauernbrot</p>
+                        </div>
+                        <div class="menu-item-price">€ 11,50</div>
                     </div>
                     
-                    <div class="feature-item">
-                        <h3>🎉 Festlichkeiten</h3>
-                        <p>Für Feiern und geschlossene Gesellschaften bieten wir Räumlichkeiten bis zu 50 Personen mit individueller Menügestaltung.</p>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Leberkäse-Spiess</h3>
+                            <p>Serviert mit süßem Senf und Brezn</p>
+                        </div>
+                        <div class="menu-item-price">€ 8,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Handkäs mit Musik</h3>
+                            <p>Traditioneller Handkäse mit Kümmel, Zwiebeln und Apfelwein-Vinaigrette, dazu Bauernbrot</p>
+                        </div>
+                        <div class="menu-item-price">€ 8,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Antipasti-Platte</h3>
+                            <p>Auswahl an italienischen Vorspeisen: getrocknete Tomaten, Oliven, eingelegtes Gemüse, Schinken und Käse</p>
+                        </div>
+                        <div class="menu-item-price">€ 13,50</div>
                     </div>
                 </div>
+            </section>
+
+            <!-- Salate -->
+            <section class="menu-section">
+                <div class="menu-category">
+                    <h2>Salate</h2>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Mixed Salad</h3>
+                            <p>Blattsalat mit Tomaten, Gurken, Paprika und hausgemachtem Joghurt-Dressing</p>
+                        </div>
+                        <div class="menu-item-price">€ 7,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Caesar Salad</h3>
+                            <p>Römersalat mit Croutons, Parmesan und Caesar-Dressing, dazu Hähnchenbruststreifen</p>
+                        </div>
+                        <div class="menu-item-price">€ 14,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Bauernsalat</h3>
+                            <p>Tomaten, Gurken, Paprika, Zwiebeln und Kartoffeln in Kräuter-Vinaigrette</p>
+                        </div>
+                        <div class="menu-item-price">€ 9,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Spinat-Feta-Salat</h3>
+                            <p>Frischer Blattspinat mit Feta, Walnüssen, getrockneten Tomaten und Balsamico-Dressing</p>
+                        </div>
+                        <div class="menu-item-price">€ 12,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Speck-Salat</h3>
+                            <p>Warme Speckwürfel auf Blattsalat mit Bratkartoffeln und Balsamico-Dressing</p>
+                        </div>
+                        <div class="menu-item-price">€ 13,90</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hauptgerichte -->
+            <section class="menu-section">
+                <div class="menu-category">
+                    <h2>Hauptgerichte</h2>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Wiener Schnitzel</h3>
+                            <p>Vom Kalb, paniert, mit hausgemachtem Kartoffelsalat, Zitrone und Preiselbeeren</p>
+                        </div>
+                        <div class="menu-item-price">€ 19,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Schweinebraten</h3>
+                            <p>Aus der Schulter, 24h mariniert, mit Semmelknödel, Rotkohl und Biersauce</p>
+                        </div>
+                        <div class="menu-item-price">€ 17,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Allgäuer Käsespätzle</h3>
+                            <p>Hausgemachte Spätzle, überbacken mit Bergkäse, Röstzwiebeln und Schnittlauch, dazu kleiner Salat</p>
+                        </div>
+                        <div class="menu-item-price">€ 14,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Forelle Müllerin</h3>
+                            <p>Frisch aus der Region, in Butter gebraten, mit Mandeln, Petersilie, Kartoffeln und Zitrone</p>
+                        </div>
+                        <div class="menu-item-price">€ 18,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Knusprige Schweinshaxe</h3>
+                            <p>Gebratene Schweinshaxe mit Sauerkraut, Kartoffelknödeln und dunkler Biersauce</p>
+                        </div>
+                        <div class="menu-item-price">€ 21,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Rinderroulade</h3>
+                            <p>Mit Speck, Gurke und Senf gefüllt, in Rotweinsauce geschmort, dazu Rotkohl und Kartoffelklöße</p>
+                        </div>
+                        <div class="menu-item-price">€ 22,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Schwäbische Maultaschen</h3>
+                            <p>Hausgemachte Maultaschen, serviert mit Zwiebelschmelze, Butterbröseln und kleinem Salat</p>
+                        </div>
+                        <div class="menu-item-price">€ 15,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Zwiebelrostbraten</h3>
+                            <p>Rindfleisch mit knusprigen Zwiebeln und Rotweinsauce, dazu Bratkartoffeln</p>
+                        </div>
+                        <div class="menu-item-price">€ 23,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Frischer Lachs</h3>
+                            <p>Gebratenes Lachsfilet mit Kräuterbutter, dazu Gemüse und Kartoffeln</p>
+                        </div>
+                        <div class="menu-item-price">€ 24,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Gemüse-Lasagne</h3>
+                            <p>Überbackene Lasagne mit saisonalem Gemüse, Béchamel und Tomatensauce, dazu kleiner Salat</p>
+                        </div>
+                        <div class="menu-item-price">€ 16,90</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Für unsere kleinen Gäste -->
+            <section class="menu-section">
+                <div class="menu-category">
+                    <h2>Für unsere kleinen Gäste</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 30px; font-style: italic;">Für Kinder bis 12 Jahre – inklusive Softdrink 0,3l</p>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Mini-Schnitzel</h3>
+                            <p>Paniertes Hähnchenfilet mit Pommes oder Kartoffeln</p>
+                        </div>
+                        <div class="menu-item-price">€ 9,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Kinder-Spätzle</h3>
+                            <p>Käsespätzle mit kleinem Salat</p>
+                        </div>
+                        <div class="menu-item-price">€ 8,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Frikadellen mit Kartoffelpüree</h3>
+                            <p>Zwei kleine Frikadellen mit Kartoffelpüree und Erbsen-Möhren-Gemüse</p>
+                        </div>
+                        <div class="menu-item-price">€ 9,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Pasta mit Tomatensauce</h3>
+                            <p>Nudeln mit hausgemachter Tomatensauce und Parmesan</p>
+                        </div>
+                        <div class="menu-item-price">€ 8,90</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Beilagen -->
+            <section class="menu-section">
+                <div class="menu-category">
+                    <h2>Beilagen</h2>
+                    
+                    <div class="menu-grid">
+                        <div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Pommes frites</h3>
+                                </div>
+                                <div class="menu-item-price">€ 4,50</div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Bratkartoffeln</h3>
+                                </div>
+                                <div class="menu-item-price">€ 4,90</div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Kroketten</h3>
+                                </div>
+                                <div class="menu-item-price">€ 4,50</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Semmelknödel</h3>
+                                </div>
+                                <div class="menu-item-price">€ 3,90</div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Kartoffelknödel</h3>
+                                </div>
+                                <div class="menu-item-price">€ 3,90</div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Spätzle</h3>
+                                </div>
+                                <div class="menu-item-price">€ 4,50</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Salat klein</h3>
+                                </div>
+                                <div class="menu-item-price">€ 4,50</div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Rotkohl</h3>
+                                </div>
+                                <div class="menu-item-price">€ 3,50</div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h3>Sauerkraut</h3>
+                                </div>
+                                <div class="menu-item-price">€ 3,50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Desserts -->
+            <section class="menu-section">
+                <div class="menu-category">
+                    <h2>Desserts & Süßes</h2>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Apfelstrudel</h3>
+                            <p>Warm serviert mit Vanilleeis und hausgemachter Vanillesauce</p>
+                        </div>
+                        <div class="menu-item-price">€ 8,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Bayerische Creme</h3>
+                            <p>Vanillecreme mit Beerensauce und frischen Früchten</p>
+                        </div>
+                        <div class="menu-item-price">€ 6,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Schokoladentörtchen</h3>
+                            <p>Warmes Schokotörtchen mit flüssigem Kern, dazu Vanilleeis</p>
+                        </div>
+                        <div class="menu-item-price">€ 8,50</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Eisbecher "Goldener Löwe"</h3>
+                            <p>Vanille-, Schokoladen- und Erdbeereis mit Sahne, Früchten und Nüssen</p>
+                        </div>
+                        <div class="menu-item-price">€ 7,90</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h3>Kindereis</h3>
+                            <p>2 Kugeln Eis nach Wahl mit Sahne</p>
+                        </div>
+                        <div class="menu-item-price">€ 4,50</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Getränke -->
+            <section class="menu-section">
+                <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--color-primary); margin-bottom: 40px; text-align: center;">Getränke</h2>
+                
+                <div class="menu-grid">
+                    <!-- Bier -->
+                    <div class="drink-category">
+                        <h3>🍺 Bier vom Fass</h3>
+                        <div class="drink-item"><span>Helles 0,5l</span><span>€ 4,20</span></div>
+                        <div class="drink-item"><span>Helles 0,3l</span><span>€ 3,20</span></div>
+                        <div class="drink-item"><span>Weißbier 0,5l</span><span>€ 4,40</span></div>
+                        <div class="drink-item"><span>Weißbier 0,3l</span><span>€ 3,40</span></div>
+                        <div class="drink-item"><span>Radler 0,5l</span><span>€ 4,20</span></div>
+                        <div class="drink-item"><span>Radler 0,3l</span><span>€ 3,20</span></div>
+                        <div class="drink-item"><span>Dunkles 0,5l</span><span>€ 4,30</span></div>
+                        <div class="drink-item"><span>Pils 0,3l (Flasche)</span><span>€ 3,40</span></div>
+                        <div class="drink-item"><span>Alkoholfrei 0,5l</span><span>€ 4,00</span></div>
+                    </div>
+                    
+                    <!-- Wein -->
+                    <div class="drink-category">
+                        <h3>🍷 Weine</h3>
+                        <div class="drink-item"><span>Müller-Thurgau 0,25l</span><span>€ 5,50</span></div>
+                        <div class="drink-item"><span>Riesling 0,25l</span><span>€ 5,80</span></div>
+                        <div class="drink-item"><span>Weißburgunder 0,25l</span><span>€ 6,20</span></div>
+                        <!-- KORRIGIERT: Kürzerer Text -->
+                        <div class="drink-item"><span>Spätburgunder Rot 0,25l</span><span>€ 6,50</span></div>
+                        <div class="drink-item"><span>Dornfelder 0,25l</span><span>€ 6,20</span></div>
+                        <div class="drink-item"><span>Rosé 0,25l</span><span>€ 5,80</span></div>
+                        <div class="drink-item"><span>Sekt (Glas)</span><span>€ 6,00</span></div>
+                        <div class="drink-item"><span>Weißweinschorle</span><span>€ 4,50</span></div>
+                    </div>
+                    
+                    <!-- Softdrinks -->
+                    <div class="drink-category">
+                        <h3>🥤 Softdrinks</h3>
+                        <div class="drink-item"><span>Coca-Cola / Zero 0,3l</span><span>€ 3,50</span></div>
+                        <div class="drink-item"><span>Spezi 0,3l</span><span>€ 3,50</span></div>
+                        <div class="drink-item"><span>Fanta 0,3l</span><span>€ 3,50</span></div>
+                        <div class="drink-item"><span>Sprite 0,3l</span><span>€ 3,50</span></div>
+                        <div class="drink-item"><span>Apfelschorle 0,3l</span><span>€ 3,20</span></div>
+                        <div class="drink-item"><span>Orangensaft 0,2l</span><span>€ 3,50</span></div>
+                        <div class="drink-item"><span>Apfelsaft 0,2l</span><span>€ 3,20</span></div>
+                        <!-- KORRIGIERT: Kürzerer Text -->
+                        <div class="drink-item"><span>Mineralwasser 0,5l</span><span>€ 3,00</span></div>
+                    </div>
+                    
+                    <!-- Heißgetränke -->
+                    <div class="drink-category">
+                        <h3>☕ Heißgetränke</h3>
+                        <div class="drink-item"><span>Espresso</span><span>€ 2,50</span></div>
+                        <div class="drink-item"><span>Doppelter Espresso</span><span>€ 3,50</span></div>
+                        <div class="drink-item"><span>Cappuccino</span><span>€ 3,80</span></div>
+                        <div class="drink-item"><span>Latte Macchiato</span><span>€ 4,20</span></div>
+                        <div class="drink-item"><span>Café Crème</span><span>€ 3,50</span></div>
+                        <div class="drink-item"><span>Tee (versch. Sorten)</span><span>€ 3,20</span></div>
+                        <div class="drink-item"><span>Heiße Schokolade</span><span>€ 4,00</span></div>
+                        <div class="drink-item"><span>Apfelglühwein</span><span>€ 4,50</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Allergen-Hinweis -->
+            <div class="allergen-hinweis">
+                <strong>Allergene und Zusatzstoffe:</strong>
+                Wir weisen darauf hin, dass wir in unserer Küche mit verschiedenen Allergenen arbeiten. Bitte informieren Sie unser Personal über Unverträglichkeiten oder Allergien. Gerne geben wir Ihnen Auskunft über enthaltene Allergene in unseren Speisen.
             </div>
 
-            <div style="text-align: center;">
-                <a href="index.html" class="back-link">← Zurück zur Startseite</a>
-            </div>
+            <a href="index.html" class="back-link">← Zurück zur Startseite</a>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3 class="footer-logo">ZUM GOLDENEN LÖWEN</h3>
                     <p>Regionale Küche mit Herz seit 1987</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html#philosophie">Unser Versprechen</a></li>
-                        <li><a href="speisekarte.html">Speisekarte</a></li>
-                        <li><a href="ambiente.html">Ambiente</a></li>
-                        <li><a href="index.html#team">Team</a></li>
-                    </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Rechtliches</h4>
@@ -304,16 +803,11 @@
                         <li><a href="agb.html">AGB</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Kontakt</h4>
-                    <p>Marktplatz 12<br>80331 München</p>
-                    <p>+49 89 123 456 78</p>
-                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 ZUM GOLDENEN LÖWEN. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
-</body>
-</html>
+
+    <script
